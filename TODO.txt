@@ -1,0 +1,9 @@
+ 待翻译文档
+ 
+ 第一篇和第二篇可以综合起来翻译
+ 
+ http://forkbomb-blog.de/2015/all-you-need-to-know-about-mqtt
+ 
+ https://activemq.apache.org/apollo/documentation/mqtt-manual.html
+ 
+  http://www.hivemq.com/mqtt-security-fundamentals-wrap-up/
