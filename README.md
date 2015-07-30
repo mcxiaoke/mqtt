@@ -1,15 +1,19 @@
-# MQTT协议3.1.1版
+# MQTT 3.1.1 中文版
 
-## 中文翻译
+## 文档
 
 文档|连接
 ----|----
+中文版 HTML：| [MQTT 3.1.1 中文版](http://mcxiaoke.github.io/mqtt/protocol/MQTT-3.1.1-CN.html)
+中文版 PDF：| [MQTT 3.1.1 中文版](protocol/MQTT-3.1.1-CN.pdf)
 英文版 HTML：| [MQTT Version 3.1.1](http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html)
 英文版 PDF：| [MQTT Version 3.1.1](http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.pdf)
-中文版 HTML：| [MQTT协议3.1.1中文版](http://mcxiaoke.github.io/mqtt/protocol/MQTT-3.1.1-CN.html)
-中文版 PDF：| [MQTT协议3.1.1中文版](protocol/MQTT-3.1.1-CN.pdf)
 
-## MQTT概述
+------
+
+## 概述
+
+[**查看全文**](http://mcxiaoke.github.io/mqtt/protocol/MQTT-3.1.1-CN.html)
 
 ```
 MQTT是一个客户端服务端架构的发布/订阅模式的消息传输协议。它的设计思想是轻巧、开放、
@@ -31,18 +35,18 @@ MQTT是一个客户端服务端架构的发布/订阅模式的消息传输协议
 * 异常连接断开发生时，能通知到相关各方。
 
 ------
-## 关于作者
+## 作者
 
-### 联系方式
+#### 联系方式
 * Blog: <http://blog.mcxiaoke.com>
 * Github: <https://github.com/mcxiaoke>
 * Email: [mail@mcxiaoke.com](mailto:mail@mcxiaoke.com)
 
-### 开源项目
+#### 开源项目
 
 * Rx文档中文翻译: <https://github.com/mcxiaoke/RxDocs>
 * Next公共组件库: <https://github.com/mcxiaoke/Android-Next>
-* Gradle多渠道打包工具: <https://github.com/mcxiaoke/gradle-packer-plugin>
+* Gradle渠道打包: <https://github.com/mcxiaoke/gradle-packer-plugin>
 * 蘑菇饭App: <https://github.com/mcxiaoke/minicat>
 * 饭否客户端: <https://github.com/mcxiaoke/fanfouapp-opensource>
 * Volley镜像: <https://github.com/mcxiaoke/android-volley>
