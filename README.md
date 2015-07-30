@@ -4,10 +4,10 @@
 
 文档|连接
 ----|----
-中文版 HTML：| [MQTT 3.1.1 中文版](http://mcxiaoke.github.io/mqtt/protocol/MQTT-3.1.1-CN.html)
-中文版 PDF：| [MQTT 3.1.1 中文版](protocol/MQTT-3.1.1-CN.pdf)
-英文版 HTML：| [MQTT Version 3.1.1](http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html)
-英文版 PDF：| [MQTT Version 3.1.1](http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.pdf)
+中文版 HTML | [MQTT 3.1.1 中文版](http://mcxiaoke.github.io/mqtt/protocol/MQTT-3.1.1-CN.html)
+中文版 PDF | [MQTT 3.1.1 中文版](http://mcxiaoke.github.io/mqtt/protocol/MQTT-3.1.1-CN.pdf)
+英文版 HTML | [MQTT Version 3.1.1](http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html)
+英文版 PDF | [MQTT Version 3.1.1](http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.pdf)
 
 ------
 
