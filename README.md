@@ -34,7 +34,7 @@ MQTT协议运行在TCP/IP或其它提供了有序、可靠、双向连接的网�
 * 异常连接断开发生时，能通知到相关各方。
 
 ------
-## 作者
+## 关于作者
 
 #### 联系方式
 * Blog: <http://blog.mcxiaoke.com>
@@ -43,9 +43,11 @@ MQTT协议运行在TCP/IP或其它提供了有序、可靠、双向连接的网�
 
 #### 开源项目
 
-* Rx文档中文翻译: <https://github.com/mcxiaoke/RxDocs>
 * Next公共组件库: <https://github.com/mcxiaoke/Android-Next>
 * Gradle渠道打包: <https://github.com/mcxiaoke/gradle-packer-plugin>
+* EventBus实现xBus: <https://github.com/mcxiaoke/xBus>
+* Rx文档中文翻译: <https://github.com/mcxiaoke/RxDocs>
+* MQTT协议中文版: <https://github.com/mcxiaoke/mqtt>
 * 蘑菇饭App: <https://github.com/mcxiaoke/minicat>
 * 饭否客户端: <https://github.com/mcxiaoke/fanfouapp-opensource>
 * Volley镜像: <https://github.com/mcxiaoke/android-volley>
