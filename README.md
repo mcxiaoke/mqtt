@@ -12,7 +12,7 @@ MQTT是一个客户端服务端架构的发布/订阅模式的消息传输协议
 
 **发现任何翻译问题或格式问题欢迎提PR帮忙完善，有任何意见可以提Issue。**
 
-- [第一章 - MQTT介绍](mqtt/01-Introcution.md)
+- [第一章 - MQTT介绍](mqtt/01-Introduction.md)
 - [第二章 – MQTT控制报文格式](mqtt/02-ControlPacketFormat.md)
 - [第三章 – MQTT控制报文](mqtt/03-ControlPackets.md)
 	- [3.1 CONNECT – 连接服务端](mqtt/0301-CONNECT.md)
