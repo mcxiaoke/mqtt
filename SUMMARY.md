@@ -1,5 +1,3 @@
-- [前言](mqtt/00-Preface.md)
-- [目录](mqtt/00-Contents.md)
 - [第一章 - MQTT介绍](mqtt/01-Introduction.md)
 - [第二章 – MQTT控制报文格式](mqtt/02-ControlPacketFormat.md)
 - [第三章 – MQTT控制报文](mqtt/03-ControlPackets.md)
@@ -22,3 +20,5 @@
 - [第六章 – 使用WebSocket](mqtt/06-WebSocket.md)
 - [第七章 – 一致性目标](mqtt/07-Conformance.md)
 - [附录B - 强制性规范声明](mqtt/08-AppendixB.md)
+
+
