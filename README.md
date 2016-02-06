@@ -1,10 +1,12 @@
 # MQTT协议中文版
 
+by [mcxiaoke](https://github.com/mcxiaoke)
+
 **最新版本: v1.0.3 2016.02.06**
 
-- [项目主页](https://github.com/mcxiaoke/mqtt)
+- [翻译项目](https://github.com/mcxiaoke/mqtt)
 - [在线阅读](https://mcxiaoke.gitbooks.io/mqtt-cn/content/)
-- [PDF和ePub下载](https://www.gitbook.com/book/mcxiaoke/mqtt-cn/details)
+- [PDF和ePub](https://www.gitbook.com/book/mcxiaoke/mqtt-cn/details)
 
 ## 概述
 
@@ -14,7 +16,7 @@ MQTT是一个客户端服务端架构的发布/订阅模式的消息传输协议
 
 >MQTT英文原版协议提供了Word格式和HTML格式，我翻译的时候用的Word文档，之前一直提供的是Word文档转换的HTML和PDF共浏览和下载，最近花时间整理了Markdown版本，可以更方便的分章节在线浏览了，转换为Markdown后部分表格的格式不太对，会逐步用图片代替。
 
-## 文档目录
+## 目录
 
 **发现任何翻译问题或格式问题欢迎提PR帮忙完善。**
 
