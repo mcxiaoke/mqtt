@@ -4,9 +4,11 @@ by [mcxiaoke](https://github.com/mcxiaoke)
 
 **最新版本: v1.0.3 2016.02.06**
 
-- [翻译项目](https://github.com/mcxiaoke/mqtt)
-- [在线阅读](https://mcxiaoke.gitbooks.io/mqtt-cn/content/)
-- [PDF和ePub](https://www.gitbook.com/book/mcxiaoke/mqtt-cn/details)
+## 文档地址
+
+- [MQTT协议中文版](https://mcxiaoke.gitbooks.io/mqtt-cn/content/)
+- [PDF和ePub下载](https://www.gitbook.com/book/mcxiaoke/mqtt-cn/details)
+- [中文翻译项目](https://github.com/mcxiaoke/mqtt)
 
 ## 概述
 
@@ -48,7 +50,7 @@ MQTT是一个客户端服务端架构的发布/订阅模式的消息传输协议
 
 ------
 
-### 旧版文档下载
+## 旧版文档
 
 >已过期，建议使用GitBook版本
 >最新版本: v1.0.1 2015.10.22
