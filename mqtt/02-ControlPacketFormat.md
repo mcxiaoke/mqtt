@@ -1,4 +1,4 @@
-# 第二章 MQTT控制报文格式
+# 第二章 MQTT控制报文格式 MQTT Control Packet format
 
 ## 目录
 
@@ -11,7 +11,7 @@
 - [第七章 – 一致性目标](07-Conformance.md)
 - [附录B - 强制性规范声明](08-AppendixB.md)
 
-## 2.1 MQTT控制报文的结构
+## 2.1 MQTT控制报文的结构 Structure of an MQTT Control Packet
 
 MQTT协议通过交换预定义的MQTT控制报文来通信。这一节描述这些报文的格式。
 
@@ -24,7 +24,7 @@ MQTT控制报文由三部分组成，按照 [图例 2.1 –MQTT控制报文的�
 | Variable header | 可变报头，部分控制报文包含 |
 | Payload | 有效载荷，部分控制报文包含         |
 
-## 2.2 固定报头
+## 2.2 固定报头 Fixed header
 
 每个MQTT控制报文都包含一个固定报头。[图例 2.2 -固定报头的格式](#_Figure_2.2_-) 描述了固定报头的格式。
 
@@ -35,13 +35,13 @@ MQTT控制报文由三部分组成，按照 [图例 2.1 –MQTT控制报文的�
 | byte 1  | MQTT控制报文的类型 | 用于指定控制报文类型的标志位 |
 | byte 2… | 剩余长度           |
 
-### 2.2.1 MQTT控制报文的类型
+### 2.2.1 MQTT控制报文的类型 MQTT Control Packet type
 
 **位置：**第1个字节，二进制位7-4。
 
 表示为4位无符号值，这些值的定义见 [表格 2.1 -控制报文的类型](#_Table_2.1_-)
 
-##### 表格 2.1 -控制报文的类型
+##### 表格 2.1 -控制报文的类型 
 
 | **名字**    | **值** | **报文流动方向** | **描述**                            |
 |-------------|--------|------------------|-------------------------------------|
@@ -66,7 +66,7 @@ MQTT控制报文由三部分组成，按照 [图例 2.1 –MQTT控制报文的�
 
 固定报头第1个字节的剩余的4位 \[3-0\]包含每个MQTT控制报文类型特定的标志，见 [表格 2.2 -标志位](#表格-2.2--标志位)。表格 2.2中任何标记为“保留”的标志位，都是保留给以后使用的，**必须**设置为表格中列出的值 \[MQTT-2.2.2-1\]。如果收到非法的标志，接收者**必须**关闭网络连接。有关错误处理的详细信息见 4.8节 \[MQTT-2.2.2-2\]。
 
-#####  表格 2.2 -标志位
+#####  表格 2.2 - 标志位 Flag Bits
 
 | **控制报文** | **固定报头标志**   | **Bit 3**       | **Bit 2**       | **Bit 1**       | **Bit 0**          |
 |--------------|--------------------|-----------------|-----------------|-----------------|--------------------|
@@ -85,15 +85,13 @@ MQTT控制报文由三部分组成，按照 [图例 2.1 –MQTT控制报文的�
 | PINGRESP     | Reserved           | 0               | 0               | 0               | 0                  |
 | DISCONNECT   | Reserved           | 0               | 0               | 0               | 0                  |
 
-DUP<sup>1</sup> =控制报文的重复分发标志
-
-QoS<sup>2</sup> = PUBLISH报文的服务质量等级
-
-RETAIN<sup>3</sup> = PUBLISH报文的保留标志
+- DUP<sup>1</sup> =控制报文的重复分发标志
+- QoS<sup>2</sup> = PUBLISH报文的服务质量等级
+- RETAIN<sup>3</sup> = PUBLISH报文的保留标志
 
 PUBLISH控制报文中的DUP, QoS和RETAIN标志的描述见 3.3.1节。
 
-### 2.2.3 剩余长度
+### 2.2.3 剩余长度 Remaining Length
 
 **位置：**从第2个字节开始。
 
@@ -111,7 +109,7 @@ PUBLISH控制报文中的DUP, QoS和RETAIN标志的描述见 3.3.1节。
 >
 > [表格 2.4剩余长度字段的大小](#_Table_2.4_Size)展示了剩余长度字段所表示的值随字节增长。
 
-##### 表格 2.4剩余长度字段的大小
+##### 表格 2.4剩余长度字段的大小 Size of Remaining Length field
 
 | **字节数** | **最小值**                         | **最大值**                           |
 |------------|------------------|----------------------|
@@ -166,20 +164,20 @@ while ((encodedByte AND 128) != 0)
 
 >这个算法终止时，value包含的就是剩余长度的值。
 
-## 2.3 可变报头
+## 2.3 可变报头 Variable header
 
 某些MQTT控制报文包含一个可变报头部分。它在固定报头和负载之间。可变报头的内容根据报文类型的不同而不同。可变报头的报文标识符（Packet Identifier）字段存在于在多个类型的报文里。
 
-### 2.3.1 报文标识符
+### 2.3.1 报文标识符 Packet Identifier
 
-##### 图例 2.3 -报文标识符类型
+##### 图例 2.3 -报文标识符字节 Packet Identifier bytes
 
 | **Bit** | **7**  - **0** |
 |---------|----------------|
 | byte 1  | 报文标识符 MSB |
 | byte 2  | 报文标识符 LSB |
 
-很多控制报文的可变报头部分包含一个两字节的报文标识符字段。这些报文是PUBLISH（QoS&gt;0时）， PUBACK，PUBREC，PUBREL，PUBCOMP，SUBSCRIBE, SUBACK，UNSUBSCIBE，UNSUBACK。
+很多控制报文的可变报头部分包含一个两字节的报文标识符字段。这些报文是PUBLISH（QoS  = 0时）， PUBACK，PUBREC，PUBREL，PUBCOMP，SUBSCRIBE, SUBACK，UNSUBSCIBE，UNSUBACK。
 
 SUBSCRIBE，UNSUBSCRIBE和PUBLISH（QoS大于0）控制报文**必须**包含一个非零的16位报文标识符（Packet Identifier）\[MQTT-2.3.1-1\]。客户端每次发送一个新的这些类型的报文时都**必须**分配一个当前未使用的报文标识符 \[MQTT-2.3.1-2\]。如果一个客户端要重发这个特殊的控制报文，在随后重发那个报文时，它**必须**使用相同的标识符。当客户端处理完这个报文对应的确认后，这个报文标识符就释放可重用。QoS 1的PUBLISH对应的是PUBACK，QoS 2的PUBLISH对应的是PUBCOMP，与SUBSCRIBE或UNSUBSCRIBE对应的分别是SUBACK或UNSUBACK \[MQTT-2.3.1-3\]。发送一个QoS 0的PUBLISH报文时，相同的条件也适用于服务端 \[MQTT-2.3.1-4\]。
 
@@ -189,13 +187,13 @@ PUBACK, PUBREC, PUBREL报文**必须**包含与最初发送的PUBLISH报文相�
 
 需要报文标识符的控制报文在 [表格 2.5 -包含报文标识符的控制报文](#_Table_2.5_-) 中列出。
 
-##### 表格 2.5 -包含报文标识符的控制报文
+##### 表格 2.5 -包含报文标识符的控制报文 Control Packets that contain a Packet Identifier
 
 | **控制报文** | **报文标识符字段**     |
 |--------------|------------------------|
 | CONNECT      | 不需要                 |
 | CONNACK      | 不需要                 |
-| PUBLISH      | 需要（如果QoS &gt; 0） |
+| PUBLISH      | 需要（如果QoS = 0） |
 | PUBACK       | 需要                   |
 | PUBREC       | 需要                   |
 | PUBREL       | 需要                   |
@@ -225,7 +223,7 @@ PUBACK | Packet Identifier=0x1234---
 
 某些MQTT控制报文在报文的最后部分包含一个有效载荷，这将在第三章论述。对于PUBLISH来说有效载荷就是应用消息。[表格 2.6 – 包含有效载荷的控制报文](#_Table_2.6_-) 列出了需要有效载荷的控制报文。
 
-##### 表格 2.6 – 包含有效载荷的控制报文
+##### 表格 2.6 – 包含有效载荷的控制报文 Control Packets that contain a Payload
 
 | **控制报文** | **有效载荷** |
 |--------------|--------------|
@@ -243,3 +241,10 @@ PUBACK | Packet Identifier=0x1234---
 | PINGREQ      | 不需要       |
 | PINGRESP     | 不需要       |
 | DISCONNECT   | 不需要       |
+
+
+### 项目主页
+
+- [MQTT协议中文版](https://github.com/mcxiaoke/mqtt)
+
+

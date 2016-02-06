@@ -174,3 +174,9 @@ TLS [\[RFC5246\]](#RFC5246) 可以对网络传输的数据加密。如果有效�
 **[\[FIPS1402\]](#FIPS1402) (FIPS PUB 140-2) 加密模块的安全要求**
 **[\[PCIDSS\]](#PCIDSS) PCI-DSS第三方支付行业数据安全标准**
 **[\[NSAB\]](#NSAB) NSA加密组合B
+
+### 项目主页
+
+- [MQTT协议中文版](https://github.com/mcxiaoke/mqtt)
+
+

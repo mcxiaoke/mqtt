@@ -1,20 +1,3 @@
-# 第三章 MQTT控制报文
-
-- [3.1 CONNECT – 连接服务端 20](0301-CONNECT.md)
-- [3.2 CONNACK – 确认连接请求 28](0302-CONNACK.md)
-- [3.3 PUBLISH – 发布消息 30](0303-PUBLISH.md)
-- [3.4 PUBACK –发布确认 33](0304-PUBACK.md)
-- [3.5 PUBREC – 发布收到（QoS 2，第一步） 34](0305-PUBREC.md)
-- [3.6 PUBREL – 发布释放（QoS 2，第二步） 35](0306-PUBREL.md)
-- [3.7 PUBCOMP – 发布完成（QoS 2，第三步） 36](0307-PUBCOMP.md)
-- [3.8 SUBSCRIBE - 订阅主题 37](0308-SUBSCRIBE.md)
-- [3.9 SUBACK – 订阅确认 40](0309-SUBACK.md)
-- [3.10 UNSUBSCRIBE –取消订阅 41](0310-UNSUBSCRIBE.md)
-- [3.11 UNSUBACK – 取消订阅确认 43](0311-UNSUBACK.md)
-- [3.12 PINGREQ – 心跳请求 44](0312-PINGREQ.md)
-- [3.13 PINGRESP – 心跳响应 45](0313-PINGRESP.md)
-- [3.14 DISCONNECT –断开连接 45](0314-DISCONNECT.md)
-
 ## 3.10 UNSUBSCRIBE –取消订阅
 
 客户端发送UNSUBSCRIBE报文给服务端，用于取消订阅主题。
@@ -92,3 +75,28 @@ UNSUBSCRIBE报文提供的主题过滤器（无论是否包含通配符）**必�
 服务端**必须**发送UNSUBACK报文响应客户端的UNSUBSCRIBE请求。UNSUBACK报文**必须**包含和UNSUBSCRIBE报文相同的报文标识符 \[MQTT-3.10.4-4\]。即使没有删除任何主题订阅，服务端也**必须**发送一个SUBACK响应 \[MQTT-3.10.4-5\]。
 
 如果服务端收到包含多个主题过滤器的UNSUBSCRIBE报文，它**必须**如同收到了一系列的多个UNSUBSCRIBE报文一样处理那个报文，除了将它们的响应合并到一个单独的UNSUBACK报文外。 \[MQTT-3.10.4-6\]。
+
+
+### 第三章目录 MQTT控制报文
+
+- [3.0 Contents – MQTT控制报文](03-ControlPackets.md)
+- [3.1 CONNECT – 连接服务端](0301-CONNECT.md)
+- [3.2 CONNACK – 确认连接请求](0302-CONNACK.md)
+- [3.3 PUBLISH – 发布消息](0303-PUBLISH.md)
+- [3.4 PUBACK –发布确认](0304-PUBACK.md)
+- [3.5 PUBREC – 发布收到（QoS 2，第一步）](0305-PUBREC.md)
+- [3.6 PUBREL – 发布释放（QoS 2，第二步）](0306-PUBREL.md)
+- [3.7 PUBCOMP – 发布完成（QoS 2，第三步）](0307-PUBCOMP.md)
+- [3.8 SUBSCRIBE - 订阅主题](0308-SUBSCRIBE.md)
+- [3.9 SUBACK – 订阅确认](0309-SUBACK.md)
+- [3.10 UNSUBSCRIBE –取消订阅](0310-UNSUBSCRIBE.md)
+- [3.11 UNSUBACK – 取消订阅确认](0311-UNSUBACK.md)
+- [3.12 PINGREQ – 心跳请求](0312-PINGREQ.md)
+- [3.13 PINGRESP – 心跳响应](0313-PINGRESP.md)
+- [3.14 DISCONNECT –断开连接](0314-DISCONNECT.md)
+
+### 项目主页
+
+- [MQTT协议中文版](https://github.com/mcxiaoke/mqtt)
+
+

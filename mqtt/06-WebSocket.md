@@ -34,3 +34,9 @@
 |----------------|----------------------------------------------------------------|
 | 子协议通用名   | mqtt                                                           |
 | 子协议定义     | http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html   |
+
+### 项目主页
+
+- [MQTT协议中文版](https://github.com/mcxiaoke/mqtt)
+
+
