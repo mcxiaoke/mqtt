@@ -77,8 +77,8 @@ MQTT是一个客户端服务端架构的发布/订阅模式的消息传输协议
 
 * Rx文档中文翻译: <https://github.com/mcxiaoke/RxDocs>
 * MQTT协议中文版: <https://github.com/mcxiaoke/mqtt>
-* Awesome-Kotlin:<https://github.com/mcxiaoke/awesome-kotlin>
-* Kotlin-Koi:<https://github.com/mcxiaoke/kotlin-koi>
+* Awesome-Kotlin: <https://github.com/mcxiaoke/awesome-kotlin>
+* Kotlin-Koi: <https://github.com/mcxiaoke/kotlin-koi>
 * Next公共组件库: <https://github.com/mcxiaoke/Android-Next>
 * PackerNg极速打包: <https://github.com/mcxiaoke/packer-ng-plugin>
 * Gradle渠道打包: <https://github.com/mcxiaoke/gradle-packer-plugin>
