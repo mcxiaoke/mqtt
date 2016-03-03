@@ -177,11 +177,11 @@ while ((encodedByte AND 128) != 0)
 | byte 1  | 报文标识符 MSB |
 | byte 2  | 报文标识符 LSB |
 
-很多控制报文的可变报头部分包含一个两字节的报文标识符字段。这些报文是PUBLISH（QoS  = 0时）， PUBACK，PUBREC，PUBREL，PUBCOMP，SUBSCRIBE, SUBACK，UNSUBSCIBE，UNSUBACK。
+很多控制报文的可变报头部分包含一个两字节的报文标识符字段。这些报文是PUBLISH（QoS > 0时）， PUBACK，PUBREC，PUBREL，PUBCOMP，SUBSCRIBE, SUBACK，UNSUBSCIBE，UNSUBACK。
 
 SUBSCRIBE，UNSUBSCRIBE和PUBLISH（QoS大于0）控制报文**必须**包含一个非零的16位报文标识符（Packet Identifier）\[MQTT-2.3.1-1\]。客户端每次发送一个新的这些类型的报文时都**必须**分配一个当前未使用的报文标识符 \[MQTT-2.3.1-2\]。如果一个客户端要重发这个特殊的控制报文，在随后重发那个报文时，它**必须**使用相同的标识符。当客户端处理完这个报文对应的确认后，这个报文标识符就释放可重用。QoS 1的PUBLISH对应的是PUBACK，QoS 2的PUBLISH对应的是PUBCOMP，与SUBSCRIBE或UNSUBSCRIBE对应的分别是SUBACK或UNSUBACK \[MQTT-2.3.1-3\]。发送一个QoS 0的PUBLISH报文时，相同的条件也适用于服务端 \[MQTT-2.3.1-4\]。
 
-QoS设置为0的PUBLISH报文**不能**包含报文标识符 \[MQTT-2.3.1-5\]。
+QoS等于0的PUBLISH报文**不能**包含报文标识符 \[MQTT-2.3.1-5\]。
 
 PUBACK, PUBREC, PUBREL报文**必须**包含与最初发送的PUBLISH报文相同的报文标识符 \[MQTT-2.3.1-6\]。类似地，SUBACK和UNSUBACK**必须**包含在对应的SUBSCRIBE和UNSUBSCRIBE报文中使用的报文标识符 \[MQTT-2.3.1-7\]。
 
@@ -193,7 +193,7 @@ PUBACK, PUBREC, PUBREL报文**必须**包含与最初发送的PUBLISH报文相�
 |--------------|------------------------|
 | CONNECT      | 不需要                 |
 | CONNACK      | 不需要                 |
-| PUBLISH      | 需要（如果QoS = 0） |
+| PUBLISH      | 需要（如果QoS > 0） |
 | PUBACK       | 需要                   |
 | PUBREC       | 需要                   |
 | PUBREL       | 需要                   |
