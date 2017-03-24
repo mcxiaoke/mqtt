@@ -30,10 +30,28 @@ MQTT控制报文由三部分组成，按照 [图例 2.1 –MQTT控制报文的�
 
 ##### 图例 2.2 -固定报头的格式
 
-| **Bit** | **7**  - **0** |
-|---------|-------|
-| byte 1  | MQTT控制报文的类型 | 用于指定控制报文类型的标志位 |
-| byte 2… | 剩余长度           |
+<table style="text-align:center">
+  <tr>
+    <td align="center"><strong>Bit</strong></td>
+    <td align="center"><strong>7</strong></td>
+    <td align="center"><strong>6</strong></td>
+    <td align="center"><strong>5</strong></td>
+    <td align="center"><strong>4</strong></td>
+    <td align="center"><strong>3</strong></td>
+    <td align="center"><strong>2</strong></td>
+    <td align="center"><strong>1</strong></td>
+    <td align="center"><strong>0</strong></td>
+  </tr>
+  <tr>
+    <td>byte 1</td>
+    <td colspan="4" align="center">MQTT控制报文的类型</td>
+    <td colspan="4" align="center">用于指定控制报文类型的标志位</td>
+  </tr>
+  <tr>
+    <td>byte 2...</td>
+    <td colspan="8" align="center">剩余长度</td>
+  </tr>
+</table>
 
 ### 2.2.1 MQTT控制报文的类型 MQTT Control Packet type
 
