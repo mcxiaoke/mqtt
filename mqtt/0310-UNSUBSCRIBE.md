@@ -6,11 +6,39 @@
 
 ##### 图例 3.28 – UNSUBSCRIBE报文固定报头
 
-| **Bit** | **7**                 | **6**  | **5** | **4** | **3** | **2** | **1** | **0** |
-|---------|-----------------------|--------|-------|-------|-------|-------|-------|-------|
-| byte 1  | MQTT控制报文类型 (10) | 保留位 |
-|         | 1                     | 0      | 1     | 0     | 0     | 0     | 1     | 0     |
-| byte 2  | 剩余长度              |
+<table style="text-align:center">
+   <tr>
+     <td align="center"><strong>Bit</strong></td>
+     <td align="center"><strong>7</strong></td>
+     <td align="center"><strong>6</strong></td>
+     <td align="center"><strong>5</strong></td>
+     <td align="center"><strong>4</strong></td>
+     <td align="center"><strong>3</strong></td>
+     <td align="center"><strong>2</strong></td>
+     <td align="center"><strong>1</strong></td>
+     <td align="center"><strong>0</strong></td>
+   </tr>
+   <tr>
+     <td>byte 1</td>
+     <td colspan="4" align="center">MQTT控制报文类型 (10)</td>
+     <td colspan="4" align="center">保留位</td>
+   </tr>
+   <tr>
+       <td></td>
+       <td align="center">1</td>
+       <td align="center">0</td>
+       <td align="center">1</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">1</td>
+       <td align="center">0</td>
+     </tr>
+   <tr>
+     <td>byte 2</td>
+     <td colspan="8" align="center">剩余长度</td>
+   </tr>
+ </table>
 
 UNSUBSCRIBE报文固定报头的第3,2,1,0位是保留位且**必须**分别设置为0,0,1,0。服务端**必须**认为任何其它的值都是不合法的并关闭网络连接 \[MQTT-3.10.1-1\]。
 
@@ -24,10 +52,27 @@ UNSUBSCRIBE报文固定报头的第3,2,1,0位是保留位且**必须**分别设�
 
 ##### 图例 3.29 – UNSUBSCRIBE报文可变报头
 
-| **Bit** | **7**          | **6** | **5** | **4** | **3** | **2** | **1** | **0** |
-|---------|----------------|-------|-------|-------|-------|-------|-------|-------|
-| byte 1  | 报文标识符 MSB |
-| byte 2  | 报文标识符 LSB |
+<table style="text-align:center">
+   <tr>
+     <td align="center"><strong>Bit</strong></td>
+     <td align="center"><strong>7</strong></td>
+     <td align="center"><strong>6</strong></td>
+     <td align="center"><strong>5</strong></td>
+     <td align="center"><strong>4</strong></td>
+     <td align="center"><strong>3</strong></td>
+     <td align="center"><strong>2</strong></td>
+     <td align="center"><strong>1</strong></td>
+     <td align="center"><strong>0</strong></td>
+   </tr>
+   <tr>
+     <td>byte 1</td>
+     <td colspan="8" align="center">报文标识符 MSB</td>
+   </tr>
+   <tr>
+     <td>byte 2</td>
+     <td colspan="8" align="center">报文标识符 LSB</td>
+   </tr>
+ </table>
 
 ### 3.10.3 有效载荷
 
