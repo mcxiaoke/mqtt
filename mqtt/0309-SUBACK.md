@@ -8,12 +8,40 @@ SUBACK报文包含一个返回码清单，它们指定了SUBSCRIBE请求的每�
 
 ##### 图例 3.24 – SUBACK报文固定报头
 
-| **Bit** | **7**                | **6**  | **5** | **4** | **3** | **2** | **1** | **0** |
-|---------|----------------------|--------|-------|-------|-------|-------|-------|-------|
-| byte 1  | MQTT控制报文类型 (9) | 保留位 |
-|         | 1                    | 0      | 0     | 1     | 0     | 0     | 0     | 0     |
-| byte 2  | 剩余长度             |
-
+<table style="text-align:center">
+   <tr>
+     <td align="center"><strong>Bit</strong></td>
+     <td align="center"><strong>7</strong></td>
+     <td align="center"><strong>6</strong></td>
+     <td align="center"><strong>5</strong></td>
+     <td align="center"><strong>4</strong></td>
+     <td align="center"><strong>3</strong></td>
+     <td align="center"><strong>2</strong></td>
+     <td align="center"><strong>1</strong></td>
+     <td align="center"><strong>0</strong></td>
+   </tr>
+   <tr>
+     <td>byte 1</td>
+     <td colspan="4" align="center">MQTT控制报文类型 (9)</td>
+     <td colspan="4" align="center">保留位</td>
+   </tr>
+   <tr>
+       <td></td>
+       <td align="center">1</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">1</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+     </tr>
+   <tr>
+     <td>byte 2</td>
+     <td colspan="8" align="center">剩余长度</td>
+   </tr>
+ </table>
+ 
 **剩余长度字段**
 
 等于可变报头的长度加上有效载荷的长度。
@@ -24,11 +52,28 @@ SUBACK报文包含一个返回码清单，它们指定了SUBSCRIBE请求的每�
 
 ##### 图例 3.25 – SUBACK报文可变报头
 
-| **Bit** | **7**          | **6** | **5** | **4** | **3** | **2** | **1** | **0** |
-|---------|----------------|-------|-------|-------|-------|-------|-------|-------|
-| byte 1  | 报文标识符 MSB |
-| byte 2  | 报文标识符 LSB |
-
+<table style="text-align:center">
+   <tr>
+     <td align="center"><strong>Bit</strong></td>
+     <td align="center"><strong>7</strong></td>
+     <td align="center"><strong>6</strong></td>
+     <td align="center"><strong>5</strong></td>
+     <td align="center"><strong>4</strong></td>
+     <td align="center"><strong>3</strong></td>
+     <td align="center"><strong>2</strong></td>
+     <td align="center"><strong>1</strong></td>
+     <td align="center"><strong>0</strong></td>
+   </tr>
+   <tr>
+     <td>byte 1</td>
+     <td colspan="8" align="center">报文标识符 MSB</td>
+   </tr>
+   <tr>
+     <td>byte 2</td>
+     <td colspan="8" align="center">报文标识符 LSB</td>
+   </tr>
+ </table>
+ 
 ### 3.9.3 有效载荷
 
 有效载荷包含一个返回码清单。每个返回码对应等待确认的SUBSCRIBE报文中的一个主题过滤器。返回码的顺序**必须**和SUBSCRIBE报文中主题过滤器的顺序相同 \[MQTT-3.9.3-1\]。
@@ -37,11 +82,35 @@ SUBACK报文包含一个返回码清单，它们指定了SUBSCRIBE请求的每�
 
 ##### 图例 3.26 – SUBACK报文有效载荷格式
 
-| **Bit** | **7**  | **6** | **5** | **4** | **3** | **2** | **1** | **0** |
-|---------|--------|-------|-------|-------|-------|-------|-------|-------|
-|         | 返回码 |
-| byte 1  | X      | 0     | 0     | 0     | 0     | 0     | X     | X     |
-
+<table style="text-align:center">
+   <tr>
+     <td align="center"><strong>Bit</strong></td>
+     <td align="center"><strong>7</strong></td>
+     <td align="center"><strong>6</strong></td>
+     <td align="center"><strong>5</strong></td>
+     <td align="center"><strong>4</strong></td>
+     <td align="center"><strong>3</strong></td>
+     <td align="center"><strong>2</strong></td>
+     <td align="center"><strong>1</strong></td>
+     <td align="center"><strong>0</strong></td>
+   </tr>
+   <tr>
+     <td></td>
+     <td colspan="8" align="center">返回码</td>
+   </tr>
+    <tr>
+       <td>byte 1</td>
+       <td align="center">X</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">X</td>
+       <td align="center">X</td>
+     </tr>
+ </table>
+ 
 允许的返回码值：
 
 - 0x00 - 最大QoS 0
