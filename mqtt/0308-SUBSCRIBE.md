@@ -12,6 +12,40 @@
 |         | 1                    | 0      | 0     | 0     | 0     | 0     | 1     | 0     |
 | byte 2  | 剩余长度             |
 
+<table style="text-align:center">
+   <tr>
+     <td align="center"><strong>Bit</strong></td>
+     <td align="center"><strong>7</strong></td>
+     <td align="center"><strong>6</strong></td>
+     <td align="center"><strong>5</strong></td>
+     <td align="center"><strong>4</strong></td>
+     <td align="center"><strong>3</strong></td>
+     <td align="center"><strong>2</strong></td>
+     <td align="center"><strong>1</strong></td>
+     <td align="center"><strong>0</strong></td>
+   </tr>
+   <tr>
+     <td>byte 1</td>
+     <td colspan="4" align="center">MQTT控制报文类型 (8)</td>
+     <td colspan="4" align="center">保留位</td>
+   </tr>
+   <tr>
+       <td></td>
+       <td align="center">1</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+     </tr>
+   <tr>
+     <td>byte 2</td>
+     <td colspan="8" align="center">剩余长度</td>
+   </tr>
+ </table>
+
 SUBSCRIBE控制报固定报头的第3,2,1,0位是保留位，**必须**分别设置为0,0,1,0。服务端**必须**将其它的任何值都当做是不合法的并关闭网络连接 \[MQTT-3.8.1-1\]。
 
 **剩余长度字段**
@@ -53,6 +87,54 @@ SUBSCRIBE报文的有效载荷**必须**包含至少一对主题过滤器 和 Qo
 | 服务质量要求（Requested QoS） |
 |                               | 保留位                     | 服务质量等级 |
 | byte N+1                      | 0                          | 0            | 0     | 0     | 0     | 0     | X     | X     |
+
+<table style="text-align:center">
+   <tr>
+     <td align="center"><strong>描述</strong></td>
+     <td align="center"><strong>7</strong></td>
+     <td align="center"><strong>6</strong></td>
+     <td align="center"><strong>5</strong></td>
+     <td align="center"><strong>4</strong></td>
+     <td align="center"><strong>3</strong></td>
+     <td align="center"><strong>2</strong></td>
+     <td align="center"><strong>1</strong></td>
+     <td align="center"><strong>0</strong></td>
+   </tr>
+   <tr>
+     <td colspan="9">主题过滤器</td>
+   </tr>
+    <tr>
+     <td>byte 1</td>
+     <td colspan="8" align="center">长度 MSB</td>
+   </tr>
+    <tr>
+     <td>byte 2</td>
+     <td colspan="8" align="center">长度 LSB</td>
+   </tr>
+   <tr>
+     <td>byte 3..N</td>
+     <td colspan="8" align="center">主题过滤器（Topic Filter）</td>
+   </tr>
+   <tr>
+     <td colspan="9">服务质量要求（Requested QoS）</td>
+   </tr>
+    <tr>
+     <td></td>
+     <td colspan="6" align="center">保留位</td>
+     <td colspan="2" align="center">服务质量等级</td>
+   </tr>
+   <tr>
+       <td> byte N+1</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">X</td>
+       <td align="center">X</td>
+     </tr>
+ </table>
 
 当前版本的协议没有用到服务质量要求（Requested QoS）字节的高六位。如果有效载荷中的任何位是非零值，或者QoS不等于0,1或2，服务端**必须**认为SUBSCRIBE报文是不合法的并关闭网络连接 \[MQTT-3-8.3-4\]。
 
