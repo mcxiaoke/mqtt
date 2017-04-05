@@ -6,12 +6,50 @@ DISCONNECT报文是客户端发给服务端的最后一个控制报文。表示�
 
 ##### 图例 3.35 – DISCONNECT报文固定报头
 
-| **Bit** | **7**                 | **6**  | **5** | **4** | **3** | **2** | **1** | **0** |
-|---------|-----------------------|--------|-------|-------|-------|-------|-------|-------|
-| byte 1  | MQTT控制报文类型 (14) | 保留位 |
-|         | 1                     | 1      | 1     | 0     | 0     | 0     | 0     | 0     |
-| byte 2  | 剩余长度 (0)          |
-|         | 0                     | 0      | 0     | 0     | 0     | 0     | 0     | 0     |
+<table style="text-align:center">
+   <tr>
+     <td align="center"><strong>Bit</strong></td>
+     <td align="center"><strong>7</strong></td>
+     <td align="center"><strong>6</strong></td>
+     <td align="center"><strong>5</strong></td>
+     <td align="center"><strong>4</strong></td>
+     <td align="center"><strong>3</strong></td>
+     <td align="center"><strong>2</strong></td>
+     <td align="center"><strong>1</strong></td>
+     <td align="center"><strong>0</strong></td>
+   </tr>
+   <tr>
+     <td>byte 1</td>
+     <td colspan="4" align="center">MQTT控制报文类型 (14)</td>
+     <td colspan="4" align="center">保留位</td>
+   </tr>
+   <tr>
+       <td></td>
+       <td align="center">1</td>
+       <td align="center">1</td>
+       <td align="center">1</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+     </tr>
+   <tr>
+     <td>byte 2</td>
+     <td colspan="8" align="center">剩余长度 (0)</td>
+   </tr>
+   <tr>
+       <td></td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+       <td align="center">0</td>
+     </tr>
+ </table>
 
 服务端**必须**验证所有的保留位都被设置为0，如果它们不为0**必须**断开连接 \[MQTT-3.14.1-1\]。
 
