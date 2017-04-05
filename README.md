@@ -2,7 +2,7 @@
 
 by [mcxiaoke](https://github.com/mcxiaoke)
 
-**最新版本: v1.0.3 2016.02.06**
+**最新版本: v1.0.4 2017.04.05** (感谢 [@hentaicreep](https://github.com/hentaicreep) 修复多处表格错位问题 [PRs](https://github.com/mcxiaoke/mqtt/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Ahentaicreep))
 
 ## 文档地址
 
