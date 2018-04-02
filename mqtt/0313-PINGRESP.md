@@ -28,9 +28,9 @@
    <tr>
        <td></td>
        <td align="center">1</td>
-       <td align="center">0</td>
        <td align="center">1</td>
        <td align="center">0</td>
+       <td align="center">1</td>
        <td align="center">0</td>
        <td align="center">0</td>
        <td align="center">0</td>
