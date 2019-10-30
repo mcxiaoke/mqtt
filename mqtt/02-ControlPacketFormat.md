@@ -157,6 +157,7 @@ PUBLISH控制报文中的DUP, QoS和RETAIN标志的描述见 3.3.1节。
  endif
      'output' encodedByte
 while ( X > 0 )
+
 ```
 
 >MOD是模运算，DIV是整数除法，OR是位操作或（C语言中分别是%，/，|）
@@ -170,11 +171,11 @@ while ( X > 0 )
 multiplier = 1
 value = 0
 do
-    encodedByte = 'next byte from stream'
-    value += (encodedByte AND 127) * multiplier
-    multiplier *= 128
-    if (multiplier > 128*128*128)
-       throw Error(Malformed Remaining Length)
+      encodedByte = 'next byte from stream'
+      value += (encodedByte AND 127) * multiplier
+      if (multiplier > 128*128*128)
+        throw Error(Malformed Remaining Length)
+      multiplier *= 128
 while ((encodedByte AND 128) != 0)
 ```
 
