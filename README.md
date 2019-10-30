@@ -3,13 +3,12 @@
 by [mcxiaoke](https://github.com/mcxiaoke)
 
 **最新版本: v1.0.5 2019.10.30**  
-(https://github.com/mcxiaoke/mqtt/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Ahentaicreep))
 
 ## 文档地址
 
 - [MQTT协议中文版](https://mcxiaoke.gitbooks.io/mqtt-cn/content/)
 - [PDF和ePub下载](https://www.gitbook.com/book/mcxiaoke/mqtt-cn/details)
-- [中文翻译项目](https://github.com/mcxiaoke/mqtt)
+- [MQTT中文翻译项目](https://github.com/mcxiaoke/mqtt)
 
 ## 概述
 
