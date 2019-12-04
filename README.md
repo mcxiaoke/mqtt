@@ -4,19 +4,20 @@ by [mcxiaoke](https://github.com/mcxiaoke)
 
 **最新版本: v1.0.5 2019.10.30**  
 
+
+
 ## 文档地址
 
-- [MQTT协议中文版](https://mcxiaoke.gitbook.io/mqtt/)
+- [MQTT Monitor](https://github.com/mcxiaoke/mqtt-monitor/)
+- [MQTT项目文档](https://blog.mcxiaoke.com/mqtt/)
+- [GitBook阅读](https://mcxiaoke.gitbook.io/mqtt/)
+- [Wiki文档地址](https://github.com/mcxiaoke/mqtt/wiki)
 - [PDF和ePub下载](https://www.gitbook.com/book/mcxiaoke/mqtt-cn/details)
-- [MQTT中文翻译项目](https://github.com/mcxiaoke/mqtt)
+- [中文翻译项目](https://github.com/mcxiaoke/mqtt)
 
 ## 概述
 
 MQTT是一个客户端服务端架构的发布/订阅模式的消息传输协议。它的设计思想是轻巧、开放、简单、规范，易于实现。这些特点使得它对很多场景来说都是很好的选择，特别是对于受限的环境如机器与机器的通信（M2M）以及物联网环境（IoT）。
-
-## 说明
-
->MQTT英文原版协议提供了Word格式和HTML格式，我翻译的时候用的Word文档，之前一直提供的是Word文档转换的HTML和PDF供浏览和下载，最近花时间整理了Markdown版本，可以更方便的分章节在线浏览了，转换为Markdown后部分表格的格式不太对，会逐步用图片代替。
 
 ## 目录
 
@@ -77,6 +78,7 @@ MQTT是一个客户端服务端架构的发布/订阅模式的消息传输协议
 
 ## 开源项目
 
+* MQTT Monitor: <https://github.com/mcxiaoke/mqtt-monitor>
 * Rx文档中文翻译: <https://github.com/mcxiaoke/RxDocs>
 * MQTT协议中文版: <https://github.com/mcxiaoke/mqtt>
 * Awesome-Kotlin: <https://github.com/mcxiaoke/awesome-kotlin>
