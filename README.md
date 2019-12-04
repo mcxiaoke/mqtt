@@ -6,7 +6,7 @@ by [mcxiaoke](https://github.com/mcxiaoke)
 
 ## 文档地址
 
-- [MQTT协议中文版](https://mcxiaoke.gitbooks.io/mqtt-cn/content/)
+- [MQTT协议中文版](https://mcxiaoke.gitbook.io/mqtt/)
 - [PDF和ePub下载](https://www.gitbook.com/book/mcxiaoke/mqtt-cn/details)
 - [MQTT中文翻译项目](https://github.com/mcxiaoke/mqtt)
 
