@@ -19,10 +19,20 @@ MQTT控制报文由三部分组成，按照 [图例 2.1 –MQTT控制报文的�
 
 ##### 图例 2.1 –MQTT控制报文的结构
 
-| Fixed header | 固定报头，所有控制报文都包含  |
-|-----------------|---------------------------|
-| Variable header | 可变报头，部分控制报文包含 |
-| Payload | 有效载荷，部分控制报文包含         |
+<table style="text-align:center">
+  <tr>
+    <td align="center">Fixed header</td>
+    <td >固定报头，所有控制报文都包含</td>
+  </tr>
+  <tr>
+    <td align="center">Variable header</td>
+    <td>可变报头，部分控制报文包含</td>
+  </tr>
+  <tr>
+    <td align="center">Payload</td>
+    <td>有效载荷，部分控制报文包含</td>
+  </tr>
+</table>
 
 ## 2.2 固定报头 Fixed header
 
