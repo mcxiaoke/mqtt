@@ -2,7 +2,7 @@
 
 by [mcxiaoke](https://github.com/mcxiaoke)
 
-**最新版本: v1.0.5 2019.10.30**  
+**最新版本: v1.0.6 2021.07.07**  
 
 
 
@@ -78,7 +78,7 @@ MQTT是一个客户端服务端架构的发布/订阅模式的消息传输协议
 
 ## 开源项目
 
-* MQTT Monitor: <https://github.com/mcxiaoke/mqtt-monitor>
+* MQTT WebClient: <https://github.com/mcxiaoke/mqtt-monitor>
 * Rx文档中文翻译: <https://github.com/mcxiaoke/RxDocs>
 * MQTT协议中文版: <https://github.com/mcxiaoke/mqtt>
 * Awesome-Kotlin: <https://github.com/mcxiaoke/awesome-kotlin>
@@ -87,9 +87,6 @@ MQTT是一个客户端服务端架构的发布/订阅模式的消息传输协议
 * PackerNg极速打包: <https://github.com/mcxiaoke/packer-ng-plugin>
 * Gradle渠道打包: <https://github.com/mcxiaoke/gradle-packer-plugin>
 * EventBus实现xBus: <https://github.com/mcxiaoke/xBus>
-* 蘑菇饭App: <https://github.com/mcxiaoke/minicat>
-* 饭否客户端: <https://github.com/mcxiaoke/fanfouapp-opensource>
-* Volley镜像: <https://github.com/mcxiaoke/android-volley>
 
 ------
 
