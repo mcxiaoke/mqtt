@@ -5,13 +5,6 @@
 ### 3.8.1 固定报头
 
 ##### 图例 3.20 – SUBSCRIBE报文固定报头
-
-| **Bit** | **7**                | **6**  | **5** | **4** | **3** | **2** | **1** | **0** |
-|---------|----------------------|--------|-------|-------|-------|-------|-------|-------|
-| byte 1  | MQTT控制报文类型 (8) | 保留位 |
-|         | 1                    | 0      | 0     | 0     | 0     | 0     | 1     | 0     |
-| byte 2  | 剩余长度             |
-
 <table style="text-align:center">
    <tr>
      <td align="center"><strong>Bit</strong></td>
@@ -37,7 +30,7 @@
        <td align="center">0</td>
        <td align="center">0</td>
        <td align="center">0</td>
-       <td align="center">0</td>
+       <td align="center">1</td>
        <td align="center">0</td>
      </tr>
    <tr>
