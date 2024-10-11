@@ -25,9 +25,9 @@ PUBREL报文是对PUBREC报文的响应。它是QoS 2等级协议交换的第三
    </tr>
    <tr>
        <td></td>
-       <td align="center">1</td>
-       <td align="center">1</td>
        <td align="center">0</td>
+       <td align="center">1</td>
+       <td align="center">1</td>
        <td align="center">0</td>
        <td align="center">0</td>
        <td align="center">0</td>
